@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>活动展示 - 创客工坊</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">创客工坊</div>
     <nav>
-      <a href="/">首页</a>
-      <a href="/gallery" class="active">活动展示</a>
-      <a href="/about">关于我们</a>
-      <a href="/join" class="join-btn">加入我们</a>
+      <a href="index.html">首页</a>
+      <a href="gallery.html" class="active">活动展示</a>
+      <a href="about.html">关于我们</a>
+      <a href="join.html" class="join-btn">加入我们</a>
     </nav>
   </header>
   <main class="gallery-main">
@@ -21,39 +21,39 @@
     <p style="text-align:center;font-size:1.1rem;color:#00eaff;margin-bottom:32px;">
       这里是创客工坊的“整活”现场！<br>
       每一张照片，都是我们“搞事情”的证据！<br>
-      <b>你以为我们只会敲代码？不，我们还会敲锣打鼓、焊电路、造神器！</b>
+      <b>你以为我们只会敲代码？不，我们还会敲锤打鼓、焊电路、造神器！</b>
     </p>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/指尖魔方1.jpg') }}" alt="指尖魔方">
+        <img src="./assets/images/finger_cube1.jpg" alt="指尖魔方">
         <div class="caption">指尖魔方（CyberCube）：魔方，不止于魔方。</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/敏行正面.PNG') }}" alt="PCB尺正面">
+        <img src="./assets/images/minxing_front.PNG" alt="PCB尺正面">
         <div class="caption">高考加油PCB尺：创意设计，义卖赠送高三学子。</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/同学3D打印.jpg') }}" alt="3D打印作品">
+        <img src="./assets/images/classmate_3d_print.jpg" alt="3D打印作品">
         <div class="caption">3D打印作品：Just Do It !!!</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/上课.jpeg') }}" alt="社团上课">
+        <img src="./assets/images/in_class.jpeg" alt="社团上课">
         <div class="caption">社团课程：____ , 启动！（划掉</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/参加校外活动.jpg') }}" alt="校外活动">
+        <img src="./assets/images/attend_outdoor_activity.jpg" alt="校外活动">
         <div class="caption">校外活动</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/义卖信息.png') }}" alt="五四义卖">
+        <img src="./assets/images/charity_info.png" alt="五四义卖">
         <div class="caption">五四义卖：创新产品，供不应求！</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/同学焊接.jpeg') }}" alt="焊接实践">
-        <div class="caption">电路制作：欸，你手别抖！</div>
+        <img src="./assets/images/classmate_soldering.jpeg" alt="焊接实践">
+        <div class="caption">电路制作：嘿，你手别抖！</div>
       </div>
       <div class="gallery-item">
-        <img src="{{ url_for('static', filename='assets/images/playing_game.jpg') }}" alt="自编小游戏">
+        <img src="./assets/images/playing_game.jpg" alt="自编小游戏">
         <div class="caption">自编小游戏</div>
       </div>
     </div>
