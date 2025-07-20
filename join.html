@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加入我们 - 创客工坊</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">创客工坊</div>
+    <nav>
+      <a href="/">首页</a>
+      <a href="/gallery">活动展示</a>
+      <a href="/about">关于我们</a>
+      <a href="/join" class="join-btn active">加入我们</a>
+    </nav>
+  </header>
+  <main class="join-main">
+    <h1>加入创客工坊</h1>
+    <section class="join-section">
+      <h2>联系方式</h2>
+      <p>社长：邱楷泉<br>社长QQ: 2224948487<br>社团教室：润德楼创客工坊教室</p>
+      <p style="font-size:1.15rem;line-height:2;margin:24px 0 12px 0;">
+        我们有最强大的开发团队！<br>
+        嵌入式、安卓、桌面端、网站前后端……<br>
+        你想学的，我们都能教你！<br>
+        <b>只要你有热情，哪怕零基础，也能玩转创客！</b><br>
+        <span style="color:#00eaff;">快来和我们一起搞事情吧！</span>
+      </p>
+      <p>如有兴趣加入，请联系社团负责人或扫描下方二维码。</p>
+      <div class="qrcode-box">
+        <img src="{{ url_for('static', filename='assets/images/qrcode_1753013685858.jpg') }}" alt="二维码" class="qrcode-img">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 创客工坊 | 福建师大附中</p>
+  </footer>
+</body>
+</html> 
