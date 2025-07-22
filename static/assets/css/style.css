@@ -13,7 +13,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
-  height: 64px;
+  height: 64px; /* 恢复为64px */
   background: rgba(20, 20, 30, 0.95);
   box-shadow: 0 2px 16px rgba(0,0,0,0.2);
   position: sticky;
@@ -27,14 +27,10 @@ body, html {
   color: #00eaff;
   text-shadow: 0 2px 8px #00eaff44;
 }
-.ImgLogo {
-  height: 2rem;
-  margin-left: 0.5rem;  
-}
 .navbar nav a {
   color: #fff;
   text-decoration: none;
-  margin: 0 18px;
+  margin: 0 10px; /* 原18px，改为10px，间距更小 */
   font-size: 1.1rem;
   transition: color 0.2s;
   position: relative;
@@ -56,10 +52,10 @@ body, html {
 .navbar .join-btn {
   background: #00eaff;
   color: #232526;
-  padding: 8px 20px;
+  padding: 8px 16px; /* 原20px，略缩小 */
   border-radius: 20px;
   font-weight: bold;
-  margin-left: 16px;
+  margin-left: 8px; /* 原16px，缩小 */
   box-shadow: 0 2px 8px #00eaff55;
   transition: background 0.2s, color 0.2s;
 }
@@ -299,6 +295,15 @@ footer {
   box-shadow: 0 2px 12px #00eaff33;
 }
 
+.ImgLogo {
+  height: 48px;      /* 或你想要的高度 */
+  width: auto;       /* 保持宽高比 */
+  max-width: 100px;  /* 最大宽度限制，防止溢出 */
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 8px; /* 可选，让logo更圆润 */
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
@@ -315,17 +320,54 @@ footer {
   .navbar {
     flex-direction: column;
     height: auto;
-    padding: 0 10px;
+    padding: 10px 10px 6px 10px; /* 上下内边距更均匀 */
+  }
+  .navbar nav a {
+    margin: 0 4px; /* 移动端更紧凑 */
+    font-size: 0.98rem;
+    padding: 6px 6px;
+  }
+  .navbar .join-btn {
+    padding: 6px 10px;
+    margin-left: 4px;
+    font-size: 0.98rem;
   }
   .hero-text h1 {
     font-size: 2rem;
   }
-  .carousel-inner, .carousel-inner img {
-    height: 180px;
+  .carousel {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+  .carousel-inner {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 保证正方形 */
+    height: auto;        /* 让高度自适应 */
+    max-width: 100vw;
+    min-width: 120px;
+    min-height: 120px;
+    position: relative;
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .intro {
     padding: 24px 4vw;
     margin: 20px 2vw;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+  .ImgLogo {
+    height: 36px;
+    max-width: 70px;
   }
 }
 @media (max-width: 700px) {
@@ -339,3 +381,5 @@ footer {
     padding: 14px 6px;
   }
 } 
+
+

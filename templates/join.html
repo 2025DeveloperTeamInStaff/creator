@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>加入我们 - 创客工坊</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">创客工坊</div>
+    <div class="logo">
+      创客工坊
+      <img src="{{ url_for('static', filename='assets/images/logo.jpg')}}" alt="Logo" class="ImgLogo">
+    </div>
     <nav>
-      <a href="index.html">首页</a>
-      <a href="gallery.html">活动展示</a>
-      <a href="about.html">关于我们</a>
-      <a href="join.html" class="join-btn active">加入我们</a>
+      <a href="/">首页</a>
+      <a href="gallery">活动展示</a>
+      <a href="about">关于我们</a>
+      <a href="join" class="join-btn">Join!</a>
     </nav>
   </header>
   <main class="join-main">
@@ -30,7 +33,10 @@
       </p>
       <p>如有兴趣加入，请联系社团负责人或扫描下方二维码。</p>
       <div class="qrcode-box">
-        <img src="./assets/images/qrcode_1753013685858.jpg" alt="二维码" class="qrcode-img">
+        <img src="{{ url_for('static', filename='assets/images/qrcode_1753013685858.jpg') }}" alt="二维码" class="qrcode-img">
+      </div>
+      <div style="text-align:center;margin-top:18px;">
+        <a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=1051268272&card_type=group&source=qrcode" style="display:inline-block;padding:10px 28px;background:#00eaff;color:#fff;border-radius:6px;font-size:1.1rem;text-decoration:none;box-shadow:0 2px 8px #00eaff33;transition:background 0.2s;">点击加入QQ群</a>
       </div>
     </section>
   </main>

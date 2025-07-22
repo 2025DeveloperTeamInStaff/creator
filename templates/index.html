@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>创客工坊 - 首页</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css')}}">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">
       创客工坊
-      <img src="./assets/images/logo.png" alt="Logo" class="ImgLogo">
+      <img src="{{ url_for('static', filename='assets/images/logo.jpg')}}" alt="Logo" class="ImgLogo">
     </div>
     <nav>
-      <a href="index.html">首页</a>
-      <a href="gallery.html">活动展示</a>
-      <a href="about.html">关于我们</a>
-      <a href="join.html" class="join-btn">加入我们</a>
+      <a href="/">首页</a>
+      <a href="gallery">活动展示</a>
+      <a href="about">关于我们</a>
+      <a href="join" class="join-btn">Join!</a>
     </nav>
   </header>
   <section class="hero">
@@ -28,14 +28,15 @@
         <b>只要你敢想，我们就敢带你一起“整活”！</b><br>
         <span style="color:#00eaff;">不怕你不会，就怕你不来！</span>
       </p>
-      <a href="join.html" class="cta">我要加入！</a>
+      <a href="join" class="cta">我要加入！</a>
     </div>
     <div class="carousel">
       <div class="carousel-inner">
-        <img src="./assets/images/finger_cube1.jpg" class="active" alt="指尖魔方">
-        <img src="./assets/images/LoRa_box.png" alt="PCB尺正面">
-        <img src="./assets/images/playing_game.jpg" alt="3D打印">
-        <img src="./assets/images/classmate_soldering2.jpeg" alt="社团上课">
+        <img src="{{ url_for('static', filename='assets/images/04.png') }}" class="active" alt="指尖魔方">
+        <img src="{{ url_for('static', filename='assets/images/LoRa_box.png') }}" alt="PCB尺正面">
+        <img src="{{ url_for('static', filename='assets/images/playing_game.jpg') }}" alt="3D打印">
+        <img src="{{ url_for('static', filename='assets/images/classmate_soldering2.jpeg') }}" alt="社团上课">
+        <img src="{{ url_for('static', filename='assets/images/rtx5090.jpg') }}" alt="rtx5090">
       </div>
       <div class="carousel-controls">
         <span class="prev">&#10094;</span>
@@ -54,6 +55,6 @@
   <footer>
     <p>© 2025 创客工坊 | 福建师大附中</p>
   </footer>
-  <script src="./assets/js/main.js"></script>
+  <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
 </body>
 </html> 
